@@ -1,19 +1,19 @@
 # InitGitClient
-Git客户端连接远程仓库配置信息
+	Git客户端连接远程仓库配置信息
 
 
-#设置用户名
-git config --global user.name 'Mr-LeiLei'
-#设置邮箱
-git config --global user.email '1697922769@qq.com'
-#查看设置
-git config --list
+	#设置用户名
+		git config --global user.name '名称'
+	#设置邮箱
+		git config --global user.email '邮箱号'
+	#查看设置
+		git config --list
 
-常用命令：
-	git status 查看相关文件的状态
-	touch a.txt  创建一个文件
+	常用命令：
+		git status 查看相关文件的状态
+		touch a.txt  创建一个文件
 
-初始化本地仓库：
+	初始化本地仓库：
 	1，创建文件夹
 		mkdir test
 	2，在test文件夹内初始化Git（创建Git仓库）-->生成一个.Git文件夹
@@ -32,22 +32,22 @@ git config --list
 		从Git中删除文件：git rm a.txt
 		提交操作：git commit -m '描述'
 	
-克隆远程仓库：git clone 仓库地址
-上传到GitHub：git push
+	克隆远程仓库：git clone 仓库地址
+	上传到GitHub：git push
 
 
-解决git push错误：
-	No configured push destination.
-	原因：第一次push时需要网址
-		$ git add --all
-		$ git commit -m "提交信息"
-		$ git remote add origin '远程仓库url'
-		$ git push -u origin 对应远程分支名
+	解决git push错误：
+		No configured push destination.
+		原因：第一次push时需要网址
+			$ git add --all
+			$ git commit -m "提交信息"
+			$ git remote add origin '远程仓库url'
+			$ git push -u origin 对应远程分支名
 
-	The requested URL returned error: 403 Forbidden while accessing
-	答案：私有项目，没有权限，输入用户名密码，或者远程地址采用这种类型
-	
-	vi .git/config
-	将[remote "origin"] url=https://github.com/用户名/仓库名.git
-	修改为：[remote "origin"] url=https://用户名：密码@git.com/用户名/仓库名.git
+		The requested URL returned error: 403 Forbidden while accessing
+		答案：私有项目，没有权限，输入用户名密码，或者远程地址采用这种类型
+
+		vi .git/config
+		将[remote "origin"] url=https://github.com/用户名/仓库名.git
+		修改为：[remote "origin"] url=https://用户名：密码@git.com/用户名/仓库名.git
 
